@@ -63,6 +63,8 @@ body {
   border-radius: 18px;
   padding-top: 15px;
   padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 .ip_content span {
   font-size: 3rem;
