@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-export default function Hero() {
+export default function Exhibit() {
   const [v4address, setV4address] = React.useState([]);
   const [v6address, setV6address] = React.useState([]);
 
