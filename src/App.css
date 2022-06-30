@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Comic Neue", cursive;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--light-purple-grey);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --white: #ebeefd;
+  --light-purple-grey: #252b47;
+  --dark-purple: #10163a;
+  --medium-purple: #4844a0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: var(--dark-purple);
+}
+.header_container {
+  background-color: var(--dark-purple);
   display: flex;
-  flex-direction: column;
   align-items: center;
+  padding-left: 10%;
+  padding-right: 65%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10%;
+}
+.ip_container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-self: center;
 }
-
-.App-link {
-  color: #61dafb;
+.ip_content {
+  width: 80%;
+  justify-content: center;
+  background-color: var(--dark-purple);
+  background-color: #28c76f;
+  text-align: center;
+  border-radius: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ip_content span {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--dark-purple);
+}
+.data_points {
+  margin-top: 30px;
+  display: flex;
+}
+.activity_chart {
+  background-color: var(--dark-purple);
+  width: 40%;
+  height: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 18px;
+}
+.data_points-middle {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 35%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.middle-card {
+  background-color: var(--dark-purple);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+}
+.data_points-right {
+  background-color: var(--dark-purple);
+  height: 500px;
+  width: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 12px;
 }
