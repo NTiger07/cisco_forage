@@ -28,23 +28,15 @@ export default function App() {
   }, []);
 
   // CODE FOR RETRIEVING LATENCY INFO
+  const [latencyInfo, setLatencyInfo] = React.useState();
   const ws = new WebSocket("ws://localhost:55455");
-  var latency;
-  ws.onmessage = function (e) {
+
+  ws.onmessage = function getInfo(e) {
     var serverTime = Number(e.data);
     var clientTime = new Date().getTime();
-    latency = (clientTime - serverTime) / 1000;
-    return latency;
+    const latency = (clientTime - serverTime) / 1000;
+    setLatencyInfo(latency);
   };
-
-  console.log(
-    (ws.onmessage = function (e) {
-      var serverTime = Number(e.data);
-      var clientTime = new Date().getTime();
-      latency = (clientTime - serverTime) / 1000;
-      return latency;
-    })
-  );
 
   return (
     <div className="main_container">
@@ -62,7 +54,7 @@ export default function App() {
         exhibitTitle="Server response Latency is: "
         exhibitChildren={
           <>
-            <span></span>
+            <span>{latencyInfo}</span>
           </>
         }
       />
